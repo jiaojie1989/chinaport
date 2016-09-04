@@ -10,6 +10,20 @@
         }
     ],
     "require": {
-        "PHP" : ">=5.2"
+        "PHP": ">=5.3"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "2.6.*",
+        "phpunit/phpunit": "4.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jiaojie\\Chinaport\\Apis\\Test\\": "tests/"
+        }
     }
 }
