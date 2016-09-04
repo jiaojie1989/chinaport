@@ -1,7 +1,7 @@
 {
     "name": "jiaojie/chinaport",
     "description": "PHP Api for China E-Port.",
-    "type": "package",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
@@ -9,7 +9,6 @@
             "email": "thomasjiao@vip.qq.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "PHP" : ">=5.2"
     }
