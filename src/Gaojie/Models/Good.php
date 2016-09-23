@@ -20,6 +20,14 @@
  * @version 0.1
  * @description 
  */
-class Gaojie_Models_Good implements Gaojie_Models_ToArrIntf {
-    //put your code here
+class Gaojie_Models_Good extends Gaojie_Models_Abst implements Gaojie_Models_ToArrIntf {
+
+    protected $notNullFields = array();
+    protected $nullableFields = array();
+    protected $bcOptionalNotNullFields = array();
+
+    public function toArray() {
+        
+    }
+
 }
