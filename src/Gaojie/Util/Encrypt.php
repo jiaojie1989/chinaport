@@ -22,8 +22,19 @@
  */
 class Gaojie_Util_Encrypt {
 
-    public static function encrypt(Gaojie_Models_Abst $model) {
-        return "#";
+    public static function encrypt($model) {
+        $ret = array();
+        foreach ($model as $k => $v) {
+            switch ($k) {
+                case "order":
+                    $ret[$k] = base64_encode(base64_encode(json_encode($v->toArray())));
+                    break;
+                default:
+                    $ret[$k] = base64_encode($v);
+                    break;
+            }
+        }
+        return $ret;
     }
 
 }

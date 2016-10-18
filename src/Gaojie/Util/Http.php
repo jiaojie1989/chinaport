@@ -21,5 +21,12 @@
  * @description 
  */
 class Gaojie_Util_Http {
-    //put your code here
+
+    const GAOJIE_URL = "http://test.cargo100.com/api/index.php?act=order_bc&op=order";
+    const CONTENT_TYPE = "application/x-www-form-urlencoded";
+
+    public static function send($arr) {
+        
+    }
+
 }

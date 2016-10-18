@@ -20,6 +20,19 @@
  * @version 0.1
  * @description 
  */
-class Gaojie_Models_Body extends Gaojie_Models_Abst implements Gaojie_Models_ToArrIntf {
-    
+class Gaojie_Models_Body {
+
+    const SELLER_NAME = "yirong";
+    const API_KEY = "d21861c99868a591cb29e00bbaf26c05";
+
+    public static function getOrderBody(Gaojie_Models_Abst $orderDetail) {
+        return array(
+            "seller_name" => self::SELLER_NAME,
+            "api_key" => self::API_KEY,
+            "mark" => "order",
+            "confirm" => "",
+            "order" => $orderDetail,
+        );
+    }
+
 }

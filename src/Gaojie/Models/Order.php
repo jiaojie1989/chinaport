@@ -74,7 +74,14 @@ class Gaojie_Models_Order extends Gaojie_Models_Abst implements Gaojie_Models_To
     protected $content = array();
 
     public function toArray() {
-        
+        if (!isset($this->content["order_goods"])) {
+            throw new Gaojie_Errors_RuntimeErr("order_goods not set");
+        } else {
+            foreach ($this->content["order_goods"] as $k => $v) {
+                $this->content["order_goods"][$k] = $v->toArray();
+            }
+        }
+        return $this->content;
     }
 
     public function __set($name, $value) {

@@ -22,12 +22,29 @@
  */
 class Gaojie_Models_Good extends Gaojie_Models_Abst implements Gaojie_Models_ToArrIntf {
 
-    protected $notNullFields = array();
-    protected $nullableFields = array();
+    protected $notNullFields = array(
+        'goods_seq',
+        'goods_unit',
+        'goods_hg_num',
+        'goods_gweight',
+        'goods_name',
+        'brand',
+        'goods_spec',
+        'goods_num',
+        'goods_price',
+        'ycg_code',
+        'hs_code',
+        'curr',
+    );
+    protected $nullableFields = array(
+        'goods_barcode',
+        'goods_ptcode',
+        'goods_size',
+    );
     protected $bcOptionalNotNullFields = array();
 
     public function toArray() {
-        
+        return $this->content;
     }
 
 }
